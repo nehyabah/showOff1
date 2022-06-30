@@ -1,0 +1,212 @@
+/* 
+=============== 
+Variables
+===============
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(217, 217, 217);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* 
+====== 
+Global Styles 
+======
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-3);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*  global classes */
+
+/* section */
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+/*
+=============== 
+Recipies
+===============
+*/
+.recipies {
+  width: 90vw;
+  max-width: var(--max-width);
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+}
+
+.recipie {
+  position: relative;
+  overflow: hidden;
+}
+
+.recipie img {
+  width: 100%;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+}
+
+.recipie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+
+.recipie-info h4 {
+  color: var(--clr-white);
+  margin-bottom: 0.25rem;
+}
+
+.recipie-info p {
+  margin-bottom: 0;
+  color: var(--clr-white);
+}
+
+.recipie:hover .recipie-info {
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 576px) {
+  .movies {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+/*
+=============== 
+Single Recipie
+===============
+*/
+
+.single-recipie {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 4rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.single-recipie img {
+  width: 100%;
+  display: block;
+}
+
+.single-recipie p {
+  max-width: 35em;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+.btn {
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+  border-radius: var(--radius);
+  display: inline-block;
+  margin-top: 0.5rem;
+  letter-spacing: var(--spacing);
+}
+
+@media screen and (min-width: 992px) {
+  .single-recipie {
+    grid-template-columns: 1fr 2fr;
+  }
+}
